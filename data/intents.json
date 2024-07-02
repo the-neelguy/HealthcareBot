@@ -1,0 +1,651 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hello",
+                "Hey",
+                "Good morning",
+                "Good afternoon",
+                "Good evening"
+            ],
+            "responses": [
+                "Hello! How can I assist you today?",
+                "Hi there! What can I help you with today?"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "Take care"
+            ],
+            "responses": [
+                "Goodbye! Take care!",
+                "See you later! Stay healthy!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "Much appreciated",
+                "Thanks a lot"
+            ],
+            "responses": [
+                "You're welcome!",
+                "Happy to help!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "fever",
+            "patterns": [
+                "I have a fever",
+                "I feel hot",
+                "My body temperature is high"
+            ],
+            "responses": [
+                "I'm sorry to hear that. You can take Dolo or Calpol 650. Please see a doctor if the fever persists."
+            ],
+            "context_set": "fever_details"
+        },
+        {
+            "tag": "headache",
+            "patterns": [
+                "I have a headache",
+                "My head hurts",
+                "I feel pain in my head"
+            ],
+            "responses": [
+                "I'm sorry to hear that. You can take Crocin or Dolo. Please see a doctor if the headache persists."
+            ],
+            "context_set": "headache_details"
+        },
+        {
+            "tag": "body_ache",
+            "patterns": [
+                "I have a body ache",
+                "My body hurts",
+                "I feel pain all over"
+            ],
+            "responses": [
+                "I'm sorry to hear that. You can apply Volini or take a warm bath. Please see a doctor if the pain persists."
+            ],
+            "context_set": "body_ache_details"
+        },
+        {
+            "tag": "gas",
+            "patterns": [
+                "I have gas",
+                "My stomach feels bloated",
+                "I feel gas formation"
+            ],
+            "responses": [
+                "I'm sorry to hear that. You can take Eno or PanD. Please see a doctor if the issue persists."
+            ],
+            "context_set": "gas_details"
+        },
+        {
+            "tag": "neck_pain",
+            "patterns": [
+                "I have neck pain",
+                "My neck hurts",
+                "I feel pain in my neck"
+            ],
+            "responses": [
+                "I'm sorry to hear that. You can apply Volini or do some neck exercises. Please see a doctor if the pain persists."
+            ],
+            "context_set": "neck_pain_details"
+        },
+        {
+            "tag": "shoulder_pain",
+            "patterns": [
+                "I have shoulder pain",
+                "My shoulder hurts",
+                "I feel pain in my shoulder"
+            ],
+            "responses": [
+                "I'm sorry to hear that. You can apply Volini or do some shoulder exercises. Please see a doctor if the pain persists."
+            ],
+            "context_set": "shoulder_pain_details"
+        },
+        {
+            "tag": "leg_pain",
+            "patterns": [
+                "I have leg pain",
+                "My leg hurts",
+                "I feel pain in my leg"
+            ],
+            "responses": [
+                "I'm sorry to hear that. You can apply Volini or take a warm bath. Please see a doctor if the pain persists."
+            ],
+            "context_set": "leg_pain_details"
+        },
+        {
+            "tag": "acidity",
+            "patterns": [
+                "I have acidity",
+                "My stomach feels acidic",
+                "I feel acid formation"
+            ],
+            "responses": [
+                "I'm sorry to hear that. You can take PanD or Eno. Please see a doctor if the issue persists."
+            ],
+            "context_set": "acidity_details"
+        },
+        {
+            "tag": "eye_pain",
+            "patterns": [
+                "I have eye pain",
+                "My eyes hurt",
+                "I feel pain in my eyes"
+            ],
+            "responses": [
+                "I'm sorry to hear that. Try reducing screen time and take breaks. Please see a doctor if the pain persists."
+            ],
+            "context_set": "eye_pain_details"
+        },
+        {
+            "tag": "joint_pain",
+            "patterns": [
+                "I have joint pain",
+                "My joints hurt",
+                "I feel pain in my joints"
+            ],
+            "responses": [
+                "I'm sorry to hear that. You can apply Volini or take a warm bath. Please see a doctor if the pain persists."
+            ],
+            "context_set": "joint_pain_details"
+        },
+        {
+            "tag": "find_clinic",
+            "patterns": [
+                "Yes, please",
+                "Sure",
+                "Help me find a clinic"
+            ],
+            "responses": [
+                "Sure, please provide me with your location."
+            ],
+            "context_set": "location"
+        },
+        {
+            "tag": "location",
+            "patterns": [
+                "I am in New York",
+                "I live in Los Angeles",
+                "I am in San Francisco"
+            ],
+            "responses": [
+                "Thank you! Let me find a nearby clinic for you."
+            ],
+            "context_filter": "location"
+        },
+        {
+            "tag": "diet_suggestions",
+            "patterns": [
+                "I need diet suggestions",
+                "Can you suggest a diet?",
+                "What should I eat?"
+            ],
+            "responses": [
+                "Sure! Eating a balanced diet with plenty of fruits and vegetables, lean proteins, and whole grains is essential. Avoid processed foods and sugary drinks."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "weight_gain",
+            "patterns": [
+                "I want to gain weight",
+                "How can I gain weight?",
+                "I am underweight"
+            ],
+            "responses": [
+                "To gain weight, try eating more frequently, choose nutrient-rich foods, and incorporate healthy snacks. Consult a dietitian for a personalized plan."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "weight_loss",
+            "patterns": [
+                "I want to lose weight",
+                "How can I lose weight?",
+                "I am overweight"
+            ],
+            "responses": [
+                "To lose weight, focus on a balanced diet, portion control, and regular exercise. Avoid sugary drinks and high-calorie foods. Consult a dietitian for a personalized plan."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "healthy_lifestyle",
+            "patterns": [
+                "How can I live a healthy lifestyle?",
+                "What are some healthy habits?",
+                "Tips for a healthy life"
+            ],
+            "responses": [
+                "Maintain a balanced diet, exercise regularly, get enough sleep, manage stress, and avoid harmful habits like smoking and excessive drinking."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "exercise",
+            "patterns": [
+                "What exercises should I do?",
+                "Recommend some exercises",
+                "How to stay fit?"
+            ],
+            "responses": [
+                "Incorporate a mix of cardio, strength training, and flexibility exercises. Aim for at least 30 minutes of moderate exercise most days of the week."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "mental_health",
+            "patterns": [
+                "I am feeling stressed",
+                "I have anxiety",
+                "How can I improve my mental health?"
+            ],
+            "responses": [
+                "Practice mindfulness, engage in regular physical activity, maintain a healthy diet, and consider speaking to a mental health professional."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "sleep",
+            "patterns": [
+                "I can't sleep",
+                "I have insomnia",
+                "How to get better sleep?"
+            ],
+            "responses": [
+                "Maintain a regular sleep schedule, create a relaxing bedtime routine, and avoid screens before bedtime. Consult a doctor if the problem persists."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "hydration",
+            "patterns": [
+                "How much water should I drink?",
+                "I feel dehydrated",
+                "Tips for staying hydrated"
+            ],
+            "responses": [
+                "Aim to drink at least 8 glasses of water a day. Adjust your intake based on activity level and weather conditions."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "vitamins",
+            "patterns": [
+                "Do I need vitamins?",
+                "What vitamins should I take?",
+                "Vitamin supplements"
+            ],
+            "responses": [
+                "A balanced diet usually provides all necessary vitamins. Consult a doctor before taking any supplements."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "skin_care",
+            "patterns": [
+                "How to take care of my skin?",
+                "Skin care tips",
+                "I have skin problems"
+            ],
+            "responses": [
+                "Maintain a daily skin care routine, stay hydrated, eat a balanced diet, and avoid excessive sun exposure. Consult a dermatologist for specific concerns."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "allergies",
+            "patterns": [
+                "I have allergies",
+                "How to manage allergies?",
+                "Allergy symptoms"
+            ],
+            "responses": [
+                "Identify and avoid allergens, use antihistamines, and consult a doctor for severe reactions."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "flu",
+            "patterns": [
+                "I have flu symptoms",
+                "I feel sick",
+                "How to treat flu?"
+            ],
+            "responses": [
+                "Rest, stay hydrated, and take over-the-counter medications like Dolo or Calpol 650. Consult a doctor if symptoms worsen."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "cold",
+            "patterns": [
+                "I have a cold",
+                "How to treat a cold?",
+                "Cold symptoms"
+            ],
+            "responses": [
+                "Rest, stay hydrated, and use over-the-counter cold medications. Consult a doctor if symptoms persist."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "sore_throat",
+            "patterns": [
+                "I have a sore throat",
+                "My throat hurts",
+                "How to treat a sore throat?"
+            ],
+            "responses": [
+                "Gargle with warm salt water, stay hydrated, and use throat lozenges. Consult a doctor if symptoms persist."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "stomach_ache",
+            "patterns": [
+                "I have a stomach ache",
+                "My stomach hurts",
+                "I feel pain in my stomach"
+            ],
+            "responses": [
+                "Try taking Eno or PanD. Drink plenty of water and rest. Consult a doctor if the pain persists."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "back_pain",
+            "patterns": [
+                "I have back pain",
+                "My back hurts",
+                "I feel pain in my back"
+            ],
+            "responses": [
+                "Apply a hot or cold pack, take over-the-counter pain relievers, and maintain good posture. Consult a doctor if the pain persists."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "muscle_pain",
+            "patterns": [
+                "I have muscle pain",
+                "My muscles hurt",
+                "I feel pain in my muscles"
+            ],
+            "responses": [
+                "Apply a hot or cold pack, take over-the-counter pain relievers, and rest the affected muscles. Consult a doctor if the pain persists."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "nutrition",
+            "patterns": [
+                "What should I eat?",
+                "Nutrition tips",
+                "Healthy eating"
+            ],
+            "responses": [
+                "Eat a balanced diet with a variety of nutrients, including fruits, vegetables, whole grains, and lean proteins. Avoid processed foods and sugary drinks."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "fitness",
+            "patterns": [
+                "How to stay fit?",
+                "Fitness tips",
+                "Exercise recommendations"
+            ],
+            "responses": [
+                "Incorporate a mix of cardio, strength training, and flexibility exercises. Aim for at least 30 minutes of moderate exercise most days of the week."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "screen_time",
+            "patterns": [
+                "How to reduce screen time?",
+                "I have too much screen time",
+                "Screen time tips"
+            ],
+            "responses": [
+                "Take regular breaks, use the 20-20-20 rule, and set screen time limits. Consider engaging in other activities like reading or outdoor exercises."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "hydration_tips",
+            "patterns": [
+                "How to stay hydrated?",
+                "Hydration tips",
+                "I feel dehydrated"
+            ],
+            "responses": [
+                "Drink at least 8 glasses of water a day, eat water-rich foods, and avoid sugary drinks. Adjust your intake based on activity level and weather conditions."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "stress_management",
+            "patterns": [
+                "How to manage stress?",
+                "I feel stressed",
+                "Stress relief tips"
+            ],
+            "responses": [
+                "Practice mindfulness, engage in regular physical activity, maintain a healthy diet, and consider speaking to a mental health professional."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "vitamin_deficiency",
+            "patterns": [
+                "I have a vitamin deficiency",
+                "How to manage vitamin deficiency?",
+                "Vitamin deficiency symptoms"
+            ],
+            "responses": [
+                "A balanced diet usually provides all necessary vitamins. Consult a doctor for a proper diagnosis and treatment plan."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "dehydration",
+            "patterns": [
+                "I am dehydrated",
+                "Dehydration symptoms",
+                "How to manage dehydration?"
+            ],
+            "responses": [
+                "Drink plenty of water, eat water-rich foods, and avoid sugary drinks. Consult a doctor if symptoms persist."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "healthy_eating",
+            "patterns": [
+                "Healthy eating tips",
+                "What should I eat?",
+                "Nutrition advice"
+            ],
+            "responses": [
+                "Eat a balanced diet with a variety of nutrients, including fruits, vegetables, whole grains, and lean proteins. Avoid processed foods and sugary drinks."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "find_doctor",
+            "patterns": [
+                "I need a doctor",
+                "Help me find a doctor",
+                "Where can I find a doctor?"
+            ],
+            "responses": [
+                "Sure, please provide me with your location."
+            ],
+            "context_set": "location"
+        },
+        {
+            "tag": "location_provided",
+            "patterns": [
+                "I am in [location]",
+                "I live in [location]",
+                "My location is [location]"
+            ],
+            "responses": [
+                "Thank you! Let me find a nearby doctor for you in [location]."
+            ],
+            "context_filter": "location"
+        },
+        {
+            "tag": "doctor_search",
+            "patterns": [
+                "Search for doctors",
+                "Find doctors near me",
+                "Look for doctors in [location]"
+            ],
+            "responses": [
+                "Searching for doctors in [location]. Please wait a moment."
+            ],
+            "context_set": "doctor_search_results"
+        },
+        {
+            "tag": "doctor_search_results",
+            "patterns": [
+                "Any results?",
+                "What are the results?",
+                "Did you find any doctors?"
+            ],
+            "responses": [
+                "I found several doctors in [location]. Here are a few options: Dr. Smith at XYZ Clinic, Dr. Johnson at ABC Hospital. Would you like to book an appointment?"
+            ],
+            "context_filter": "doctor_search_results"
+        },
+        {
+            "tag": "clinic_search",
+            "patterns": [
+                "Find a clinic",
+                "Look for clinics",
+                "Clinic near me",
+                "Where is the nearest clinic?"
+            ],
+            "responses": [
+                "Sure, please provide me with your location."
+            ],
+            "context_set": "location"
+        },
+        {
+            "tag": "location_confirmation",
+            "patterns": [
+                "My location is [location]",
+                "I am in [location]",
+                "I live in [location]"
+            ],
+            "responses": [
+                "Thank you! Let me find a nearby clinic for you in [location]."
+            ],
+            "context_filter": "location"
+        },
+        {
+            "tag": "clinic_search_results",
+            "patterns": [
+                "Any clinic results?",
+                "What are the clinic results?",
+                "Did you find any clinics?"
+            ],
+            "responses": [
+                "I found several clinics in [location]. Here are a few options: XYZ Clinic, ABC Medical Center. Would you like to book an appointment?"
+            ],
+            "context_filter": "clinic_search_results"
+        },
+        {
+            "tag": "pharmacy_search",
+            "patterns": [
+                "Find a pharmacy",
+                "Look for pharmacies",
+                "Pharmacy near me",
+                "Where is the nearest pharmacy?"
+            ],
+            "responses": [
+                "Sure, please provide me with your location."
+            ],
+            "context_set": "location"
+        },
+        {
+            "tag": "pharmacy_search_results",
+            "patterns": [
+                "Any pharmacy results?",
+                "What are the pharmacy results?",
+                "Did you find any pharmacies?"
+            ],
+            "responses": [
+                "I found several pharmacies in [location]. Here are a few options: XYZ Pharmacy, ABC Drugstore. Would you like to get directions?"
+            ],
+            "context_filter": "pharmacy_search_results"
+        },
+        {
+            "tag": "hospital_search",
+            "patterns": [
+                "Find a hospital",
+                "Look for hospitals",
+                "Hospital near me",
+                "Where is the nearest hospital?"
+            ],
+            "responses": [
+                "Sure, please provide me with your location."
+            ],
+            "context_set": "location"
+        },
+        {
+            "tag": "hospital_search_results",
+            "patterns": [
+                "Any hospital results?",
+                "What are the hospital results?",
+                "Did you find any hospitals?"
+            ],
+            "responses": [
+                "I found several hospitals in [location]. Here are a few options: XYZ Hospital, ABC Medical Center. Would you like to get directions?"
+            ],
+            "context_filter": "hospital_search_results"
+        },
+        {
+            "tag": "emergency_services",
+            "patterns": [
+                "I need emergency services",
+                "Emergency help",
+                "Call an ambulance"
+            ],
+            "responses": [
+                "If this is an emergency, please dial your local emergency number immediately. For other assistance, please provide your location."
+            ],
+            "context_set": "location"
+        },
+        {
+            "tag": "emergency_location",
+            "patterns": [
+                "My location is [location]",
+                "I am in [location]",
+                "I live in [location]"
+            ],
+            "responses": [
+                "Thank you! Let me find the nearest emergency services for you in [location]."
+            ],
+            "context_filter": "location"
+        }
+    ]
+}
